@@ -1,0 +1,88 @@
+@use "../global/mixin" as mixin;
+@use "../global/variables" as global;
+
+.c-button {
+  background-color: global.$base-color;
+  color: global.$base-white;
+}
+
+.c-button__fv {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: min(250px,17.36111111111111vw);
+  border-radius: 27px;
+  background: global.$base-color;
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.24);
+  color: global.$base-white;
+  font-size: min(18px, 1.25vw);
+  font-weight: 700;
+  line-height: 18px;
+  padding-block: 18px;
+}
+
+.c-button__fv-white {
+  background-color: global.$base-white;
+  color: global.$base-color;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: min(250px,17.36111111111111vw);
+  border-radius: 27px;
+  border: 2px solid global.$base-color;
+  font-size: min(18px, 1.25vw);
+  font-weight: 700;
+  line-height: 18px;
+  padding-block: 18px;
+}
+
+.c-button__small {
+  background-color: global.$base-color;
+  color: global.$base-white;
+  border-radius: 25px;
+  font-size: 16px;
+  padding: 10px 26px 12px 26px;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.c-button__normal {
+  background-color: global.$base-color;
+  color: global.$base-white;
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.24);
+  border-radius: 29px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  padding: 20px 0 22px 0;
+  width: 300px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.c-button__middle {
+  background-color: global.$base-white;
+  color: global.$base-black;
+  border-radius: 50px;
+  border: 2px solid global.$base-black;
+  font-size: 18px;
+  padding: calc(15px - 2px) calc(45px - 2px) calc(17px - 2px) calc(45px - 2px);
+}
+
+.c-button__large {
+  background-color: global.$base-color;
+  color: global.$base-white;
+  border-radius: 50px;
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.24);
+  font-size: 24px;
+  padding: 23px 56px;
+}
+
+.c-button__white {
+  background-color: global.$base-white;
+  color: global.$base-color;
+  border: 2px solid global.$base-color;
+  line-height: 18px;
+}

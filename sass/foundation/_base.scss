@@ -1,0 +1,17 @@
+@use "../global/mixin" as mixin;
+@use "../global/variables" as global;
+
+html {
+  font-size: min(calc(16 / 1440 * 100vw), 16px);
+}
+
+body {
+  color: global.$base-black;
+  font-family: global.$ff-ja, global.$ff-en;
+}
+
+.hidden-sp {
+  @include mixin.mq(sp) {
+    display: none;
+  }
+}

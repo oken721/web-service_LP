@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ravek</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="l-header">
+      <div class="l-header__inner">
+        <h1 class="l-header__logo">
+          <img src="./img/logo.png" alt="ヘッダーロゴ" />
+        </h1>
+        <div class="l-header__menu">
+          <nav class="l-header__menu-lists">
+            <a href="#" class="l-header__menu-list">特長</a>
+            <a href="#" class="l-header__menu-list">導入実績</a>
+            <a href="#" class="l-header__menu-list">導入までの流れ</a>
+            <a href="#" class="l-header__menu-list">料金プラン</a>
+            <a href="#" class="l-header__menu-list">よくある質問</a>
+            <a href="#" class="c-button__small">無料で使ってみる</a>
+          </nav>
+        </div>
+
+        <!-- ドロワーアイコン -->
+        <div class="l-header__icon-box">
+          <span id="js-open-txt" class="l-header__open-txt">MENU</span>
+          <div class="l-header__open">
+            <button id="js-drawer-icon" class="c-drawer__icon">
+              <span class="c-drawer__icon-ber"></span>
+              <span class="c-drawer__icon-ber"></span>
+              <span class="c-drawer__icon-ber"></span>
+            </button>
+          </div>
+        </div>
+        <!-- ドロワーアイコン/ -->
+      </div>
+    </header>
+
+    <!-- ドロワーメニュー -->
+    <div id="js-drawer-menu" class="c-drawer__menu">
+      <div class="c-drawer__lists">
+        <a href="#" class="c-drawer__list">特長</a>
+        <a href="#" class="c-drawer__list">導入実績</a>
+        <a href="#" class="c-drawer__list">導入までの流れ</a>
+        <a href="#" class="c-drawer__list">料金プラン</a>
+        <a href="#" class="c-drawer__list">よくある質問</a>
+      </div>
+      <a href="#" style="display: block" class="c-button__normal"
+        >無料でRavekを使ってみる</a
+      >
+      <a
+        href="#"
+        style="display: block"
+        class="c-button__normal c-button__white"
+        >資料をダウンロードする</a
+      >
+    </div>
+
+    <!-- ファーストビュー -->
+    <section class="l-fv">
+      <div class="l-fv__wrapper">
+        <div class="l-ft__image">
+          <img src="./img/fv_img.png" alt="ファーストビュー" />
+        </div>
+        <div class="l-fv__ttl">
+          <h2 class="l-fv__ttl-txt">
+            タスク管理は<br />
+            時間をかけず、高速に。
+          </h2>
+          <p class="l-fv__ttl-lead">
+            Ravek（レイベック）は複数人のプロジェクトにおけるタスク管理を<br class="hidden-sp" />
+            簡単かつ高速にし、生産性を向上させるツールです。
+          </p>
+          <div class="l-fv__button-wrap">
+            <a href="" class="c-button c-button__fv">まずは無料で使ってみる</a>
+            <a href="" class="c-button c-button__fv-white">資料をダウンロードする</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ファーストビュー// -->
+    <!-- ドロワーメニュー/ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

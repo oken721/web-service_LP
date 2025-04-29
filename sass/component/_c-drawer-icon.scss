@@ -1,0 +1,41 @@
+@use "../global/mixin" as mixin;
+@use "../global/variables" as global;
+
+.c-drawer__icon {
+  @include mixin.mq(sp) {
+    &.is-checked {
+      .c-drawer__icon-ber {
+        &:nth-child(1) {
+          top: 10px;
+          transform: rotate(40deg);
+        }
+        &:nth-child(2) {
+          display: none;
+        }
+        &:nth-child(3) {
+          top: 10px;
+          transform: rotate(-40deg);
+        }
+      }
+    }
+  }
+}
+
+.c-drawer__icon-ber {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 21px;
+  height: 3px;
+  background-color: global.$base-color;
+  border-radius: 30px;
+  transition: transform 0.2s linear, top 0.2s linear;
+
+  &:nth-child(2) {
+    width: 13.125px;
+    top: 9px;
+  }
+  &:nth-child(3) {
+    top: 18px;
+  }
+}

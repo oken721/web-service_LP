@@ -1,0 +1,19 @@
+// カラー
+$base-black: #2D2D32;
+$base-white: #FFFFFF;
+$base-color: #64629D;
+
+// フォント
+$ff-ja: "Noto Sans JP", sans-serif;
+$ff-en: "Montserrat", sans-serif;
+
+// レイアウト幅
+$inner-width: 768px;
+
+// ブレークポイント
+$breakpoints: (
+  // スマホ：767px 以下
+  sp:  "screen and (max-width: #{($inner-width - 1px)})", // → max-width: 767px
+  // PC：768px 以上
+  pc:  "screen and (min-width: #{$inner-width})"         // → min-width: 768px
+);

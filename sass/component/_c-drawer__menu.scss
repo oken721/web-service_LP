@@ -1,0 +1,49 @@
+@use "../global/mixin" as mixin;
+@use "../global/variables" as global;
+
+.c-drawer__menu {
+  display: none;
+
+  @include mixin.mq(sp) {
+    display: none;
+    background-color: #edecfc;
+    height: 100vh;
+    padding-top: 80px;
+
+    &.is-checked {
+      display: block;
+    }
+  }
+}
+
+.c-drawer__lists {
+  @include mixin.mq(sp) {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-inline: 105px;
+    padding-bottom: 60px;
+  }
+}
+
+.c-drawer__list {
+  @include mixin.mq(sp) {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.72px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      background: url(/img/sp/drawer-text-decoration.png) no-repeat center
+        center / contain;
+      width: 20px;
+      height: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -30px;
+    }
+  }
+}

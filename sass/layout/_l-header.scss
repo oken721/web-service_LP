@@ -1,0 +1,71 @@
+@use "../global/mixin" as mixin;
+@use "../global/variables" as global;
+
+.l-header {
+}
+.l-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: calc(1187 / 1440 * 100vw);
+  margin: 0 auto;
+  height: 72px;
+
+  @include mixin.mq(sp) {
+    max-width: calc(727 / 767 * 100vw);
+    padding: 0 calc(20 / 767 * 100vw);
+    height: 52px;
+  }
+}
+.l-header__logo {
+}
+
+.l-header__menu {
+  @include mixin.mq(sp) {
+    display: none;
+  }
+}
+
+.l-header__menu-lists {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.l-header__menu-list {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0.42px;
+}
+
+.l-header__icon-box {
+  display: none;
+
+  @include mixin.mq(sp) {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+
+.l-header__open {
+  width: 21px;
+  height: 21px;
+  position: relative;
+}
+
+.l-header__open-txt {
+  @include mixin.mq(sp) {
+    color: global.$base-color;
+    text-align: center;
+    font-size: 6px;
+    font-weight: 700;
+    line-height: 6px;
+    letter-spacing: 0.12px;
+
+    &.is-checked {
+      display: none;
+    }
+  }
+}
