@@ -5,29 +5,50 @@
   background: #edecfc;
   padding-top: 117px;
   padding-bottom: 113px;
+
+  @include mixin.mq(sp) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .l-fv__wrapper {
+}
+
+.l-fv__inner {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  margin-right: min(133px, 9.23611111111111vw);
-  margin-left: min(120px, 8.333333333333332vw);
+  width: calc(1187 / 1440 * 100vw);
+  max-width: 1187px;
+  // margin: 0 auto;
+  margin-left: 8.333333333333332vw;
+  margin-right: 9.23611111111111vw;
+
+  @include mixin.mq(sp) {
+    flex-direction: column-reverse;
+    justify-content: center;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0;
+  }
 }
 
 .l-ft__image {
-  img{
-    width: min(515px, 35.76388888888889vw);
-  }
 }
 
 .l-fv__ttl {
 }
 
 .l-fv__ttl-txt {
-  font-size: min(60px, 4.166666666666666vw);
+  font-size: min(60px, 4.166vw);
   font-weight: 700;
+  white-space: nowrap;
+
+  @include mixin.mq(sp) {
+    font-size: max(30px, 8vw);
+  }
 }
 
 .l-fv__ttl-lead {
@@ -35,10 +56,30 @@
   font-size: min(18px, 1.25vw);
   font-weight: 400;
   line-height: 32.4px;
+
+  @include mixin.mq(sp) {
+    font-size: max(16px, 4.266vw);
+    line-height: max(25.6px, 6.826vw);
+  }
 }
 
 .l-fv__button-wrap {
   margin-top: 33px;
   display: flex;
   gap: 37px;
+
+  @include mixin.mq(sp) {
+    display: none;
+  }
+}
+
+.l-fv__button-wrap-sp {
+  display: none;
+
+  @include mixin.mq(sp) {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: -15px;
+  }
 }

@@ -7,14 +7,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: calc(1187 / 1440 * 100vw);
+  width: calc(1187 / 1440 * 100vw);
+  max-width: 1187px;
   margin: 0 auto;
   height: 72px;
 
   @include mixin.mq(sp) {
-    max-width: calc(727 / 767 * 100vw);
-    padding: 0 calc(20 / 767 * 100vw);
     height: 52px;
+    margin: 0;
+    width: 100%;
+    padding-inline: 20px;
   }
 }
 .l-header__logo {
@@ -33,7 +35,7 @@
 }
 
 .l-header__menu-list {
-  font-size: 14px;
+  font-size: min(14px, 1.1794439764111204vw);
   font-weight: 700;
   line-height: 14px;
   letter-spacing: 0.42px;

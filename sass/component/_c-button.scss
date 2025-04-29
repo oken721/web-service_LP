@@ -10,7 +10,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: min(250px,17.36111111111111vw);
+  width: min(250px, 17.36111111111111vw);
   border-radius: 27px;
   background: global.$base-color;
   box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.24);
@@ -19,6 +19,12 @@
   font-weight: 700;
   line-height: 18px;
   padding-block: 18px;
+
+  @include mixin.mq(sp) {
+    font-size: max(18px, 4.8vw);
+    width: max(300px, 80vw);
+    padding-block: max(18px, 4.8vw);
+  }
 }
 
 .c-button__fv-white {
@@ -27,13 +33,19 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: min(250px,17.36111111111111vw);
+  width: min(250px, 17.36111111111111vw);
   border-radius: 27px;
   border: 2px solid global.$base-color;
   font-size: min(18px, 1.25vw);
   font-weight: 700;
   line-height: 18px;
   padding-block: 18px;
+
+  @include mixin.mq(sp) {
+    font-size: max(18px, 4.8vw);
+    width: max(300px, 80vw);
+    padding-block: max(18px, 4.8vw);
+  }
 }
 
 .c-button__small {
