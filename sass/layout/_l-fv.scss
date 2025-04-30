@@ -1,12 +1,11 @@
-@use "../global/mixin" as mixin;
-@use "../global/variables" as global;
+@use "../global" as *;
 
 .l-fv {
   background: #edecfc;
-  padding-top: 117px;
-  padding-bottom: 113px;
+  padding-top: min(117px, 8.125vw);
+  padding-bottom: min(113px, 7.8472vw);
 
-  @include mixin.mq(sp) {
+  @include mq(sp) {
     padding-top: 60px;
     padding-bottom: 60px;
   }
@@ -22,11 +21,10 @@
   align-items: center;
   width: calc(1187 / 1440 * 100vw);
   max-width: 1187px;
-  // margin: 0 auto;
   margin-left: 8.333333333333332vw;
   margin-right: 9.23611111111111vw;
 
-  @include mixin.mq(sp) {
+  @include mq(sp) {
     flex-direction: column-reverse;
     justify-content: center;
     width: 100%;
@@ -46,7 +44,7 @@
   font-weight: 700;
   white-space: nowrap;
 
-  @include mixin.mq(sp) {
+  @include mq(sp) {
     font-size: max(30px, 8vw);
   }
 }
@@ -57,7 +55,7 @@
   font-weight: 400;
   line-height: 32.4px;
 
-  @include mixin.mq(sp) {
+  @include mq(sp) {
     font-size: max(16px, 4.266vw);
     line-height: max(25.6px, 6.826vw);
   }
@@ -68,7 +66,7 @@
   display: flex;
   gap: 37px;
 
-  @include mixin.mq(sp) {
+  @include mq(sp) {
     display: none;
   }
 }
@@ -76,7 +74,7 @@
 .l-fv__button-wrap-sp {
   display: none;
 
-  @include mixin.mq(sp) {
+  @include mq(sp) {
     display: flex;
     flex-direction: column;
     gap: 32px;

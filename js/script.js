@@ -12,4 +12,5 @@ $trigger.on("click", function(e) {
   e.preventDefault();
   $trigger.toggleClass("is-checked");
   $menu.stop(true).slideToggle(300).toggleClass("is-checked");
+  jQuery("body").toggleClass("is-checked");
 });

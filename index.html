@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+    <!-- header -->
     <header class="l-header">
       <div class="l-header__inner">
         <h1 class="l-header__logo">
@@ -33,7 +34,7 @@
           </nav>
         </div>
 
-        <!-- ドロワーアイコン -->
+        <!-- DrawerIcon -->
         <div class="l-header__icon-box">
           <span id="js-open-txt" class="l-header__open-txt">MENU</span>
           <div class="l-header__open">
@@ -44,11 +45,12 @@
             </button>
           </div>
         </div>
-        <!-- ドロワーアイコン/ -->
+        <!-- DrawerIcon -->
       </div>
     </header>
+    <!-- header/ -->
 
-    <!-- ドロワーメニュー -->
+    <!-- DrawerMenu -->
     <div id="js-drawer-menu" class="c-drawer__menu">
       <div class="c-drawer__lists">
         <a href="#" class="c-drawer__list">特長</a>
@@ -57,18 +59,21 @@
         <a href="#" class="c-drawer__list">料金プラン</a>
         <a href="#" class="c-drawer__list">よくある質問</a>
       </div>
-      <a href="#" style="display: block" class="c-button__normal"
-        >無料でRavekを使ってみる</a
-      >
-      <a
-        href="#"
-        style="display: block"
-        class="c-button__normal c-button__white"
-        >資料をダウンロードする</a
-      >
+      <div class="c-drawer__button">
+        <a href="#" style="display: block" class="c-button__normal"
+          >無料でRavekを使ってみる</a
+        >
+        <a
+          href="#"
+          style="display: block"
+          class="c-button__normal c-button__white"
+          >資料をダウンロードする</a
+        >
+      </div>
     </div>
+    <!-- DrawerMenu/ -->
 
-    <!-- ファーストビュー -->
+    <!-- FirstView -->
     <section class="l-fv">
       <main class="l-fv__wrapper">
         <div class="l-fv__inner">
@@ -104,8 +109,30 @@
         </div>
       </main>
     </section>
-    <!-- ファーストビュー// -->
-    <!-- ドロワーメニュー/ -->
+    <!-- FirstView -->
+
+    <!-- What-Section -->
+    <section class="l-what">
+      <div class="l-what__inner">
+        <h2 class="l-what__ttl">
+          <p class="l-what__ttl-txt">What is Ravek?</p>
+          <p class="l-what__ttl-ld">タスク管理の時間を<br class="hidden-pc" />削減するツール</p>
+        </h2>
+        <p class="l-what__desc">
+          Ravek（レイベック）は、<span>複数人が関わるプロジェクトでのタスク管理を簡単かつ高速にするツール</span>です。
+        </p>
+        <p class="l-what__desc">
+          タスクの登録や進捗管理の手間を減らし、わかりやすく見える化することで<br />
+          タスク管理にかかる時間を極限まで減らし、本質的な業務に時間を使いましょう。
+        </p>
+        <div class="l-what__button">
+          <a href="" class="c-button c-button__large"
+            >無料でRavekを使ってみる</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- What-Section/ -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./js/script.js"></script>
   </body>
