@@ -1,6 +1,6 @@
 @use "../global" as *;
 
-.l-fv {
+.p-fv {
   background: #edecfc;
   padding-top: min(117px, 8.125vw);
   padding-bottom: min(113px, 7.8472vw);
@@ -11,18 +11,17 @@
   }
 }
 
-.l-fv__wrapper {
+.p-fv__wrapper {
 }
 
-.l-fv__inner {
+.p-fv__inner {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
   width: calc(1187 / 1440 * 100vw);
   max-width: 1187px;
-  margin-left: 8.333333333333332vw;
-  margin-right: 9.23611111111111vw;
+  margin: 0 auto;
 
   @include mq(sp) {
     flex-direction: column-reverse;
@@ -33,13 +32,13 @@
   }
 }
 
-.l-ft__image {
+.l-fv__image {
 }
 
-.l-fv__ttl {
+.p-fv__ttl {
 }
 
-.l-fv__ttl-txt {
+.p-fv__ttl-txt {
   font-size: min(60px, 4.166vw);
   font-weight: 700;
   white-space: nowrap;
@@ -49,7 +48,7 @@
   }
 }
 
-.l-fv__ttl-lead {
+.p-fv__ttl-lead {
   margin-top: 24px;
   font-size: min(18px, 1.25vw);
   font-weight: 400;
@@ -61,7 +60,7 @@
   }
 }
 
-.l-fv__button-wrap {
+.p-fv__button-wrap {
   margin-top: 33px;
   display: flex;
   gap: 37px;
@@ -71,7 +70,7 @@
   }
 }
 
-.l-fv__button-wrap-sp {
+.p-fv__button-wrap-sp {
   display: none;
 
   @include mq(sp) {

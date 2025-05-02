@@ -1,0 +1,31 @@
+@use "../global" as *;
+
+.p-users {
+  padding-block: clamp-vw(60, 100);
+}
+
+.p-users__container {
+  margin-top: clamp-vw(24, 40);
+}
+
+.p-users__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: clamp-vw(12, 50);
+  column-gap: clamp-vw(11, 40);
+
+  @include mq(sp) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    gap: clamp-vw(12, 50) clamp-vw(11, 40);
+    justify-items: center;
+  }
+}
+
+.p-users__item {
+  img {
+    width: clamp-vw(75, 213);
+  }
+}

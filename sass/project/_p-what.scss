@@ -1,0 +1,30 @@
+@use "../global" as *;
+
+.p-what {
+  padding-block: min(100px, 6.9444vw);
+  text-align: center;
+}
+
+.p-what__inner {
+  @include mq(sp) {
+    padding-inline: 20px;
+    max-width: 100%;
+  }
+}
+
+.p-what__desc {
+  color: #2d2d32;
+  font-size: clamp-vw(16, 18);
+  font-weight: 400;
+  line-height: clamp-vw(25.6, 32.4);
+  margin-top: clamp-vw(24, 29);
+
+  span {
+    font-weight: 700;
+  }
+}
+
+.p-what__button {
+  margin-top: clamp-vw(24, 40);
+  text-align: center;
+}

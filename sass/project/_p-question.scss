@@ -1,0 +1,84 @@
+@use "../global" as *;
+
+.p-question {
+  padding-block: clamp-vw(60, 100);
+  background: #f9f9f9;
+}
+
+.p-question__inner {
+  @include mq(sp) {
+    max-width: 100%;
+    padding-inline: 5.3333vw;
+  }
+}
+
+.p-question__container {
+  margin-top: clamp-vw(40, 60);
+}
+
+.p-question__list {
+}
+
+.p-question__list + .p-question__list {
+  margin-top: clamp-vw(24, 24);
+}
+
+.p-question__q {
+  color: $base-white;
+  font-size: clamp-vw(16, 18);
+  font-weight: 700;
+  line-height: clamp-vw(18, 25.6);
+  border-radius: 10px;
+  background: $base-color;
+  padding-block: 1.5277vw;
+  padding-left: 3.8888vw;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "Q";
+    display: inline-block;
+    color: $base-white;
+    font-size: clamp-vw(22, 22);
+    font-weight: 700;
+    line-height: clamp-vw(22, 22);
+    left: clamp-vw(15, 24);
+  }
+
+  @include mq(sp) {
+    padding-top: 2.6666vw;
+    padding-bottom: 2.1333vw;
+    padding-right: 2.6666vw;
+    padding-left: 12.5333vw;
+    line-height: 6.82666vw;
+  }
+}
+
+.p-question__a {
+  color: $base-black;
+  background-color: $base-white;
+  font-size: clamp-vw(16, 18);
+  line-height: clamp-vw(25.6, 32.4);
+  margin-top: clamp-vw(14, 16);
+  padding-block: 1.5277vw;
+  padding-left: 3.8888vw;
+  padding-right: 1.7361vw;
+  border-radius: 10px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "A";
+    display: inline-block;
+    color: $base-black;
+    font-size: clamp-vw(22, 22);
+    font-weight: 700;
+    line-height: clamp-vw(22, 22);
+    left: clamp-vw(15, 24);
+  }
+
+  @include mq(sp) {
+  padding-left: 10.9226vw;
+  padding-block: 3.2vw;
+  }
+}

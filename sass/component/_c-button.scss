@@ -74,21 +74,46 @@
 }
 
 .c-button__middle {
+  display: inline-block;
   background-color: $base-white;
   color: $base-black;
   border-radius: 50px;
   border: 2px solid $base-black;
-  font-size: 18px;
+  font-size: clamp-vw(16, 18);
+  font-weight: 700;
+  line-height: clamp-vw(16, 18);
   padding: calc(15px - 2px) calc(45px - 2px) calc(17px - 2px) calc(45px - 2px);
+}
+
+.c-button__price {
+  text-align: center;
+  margin-top: clamp-vw(19, 28);
+  font-weight: 700;
+  line-height: clamp-vw(16, 18);
+  width: clamp-vw(166, 234);
+  padding-block: clamp-vw(13, 16);
+  padding-inline: 0;
+}
+
+.c-button__price-color {
+  border: 2px solid $base-white;
+  background-color: transparent;
+  color: $base-white;
+  margin-top: clamp-vw(19, 28);
+  line-height: clamp-vw(16, 18);
+  padding-block: clamp-vw(13, 16);
+  padding-inline: 0;
+  width: clamp-vw(166, 234);
 }
 
 .c-button__large {
   display: block;
   border-radius: 50px;
   box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.24);
-  font-size: min(24px, 1.6666vw);
-  padding: min(23px, 1.5972vw) 0;
-  width: min(400px, 27.7777vw);
+  font-size: clamp-vw(18, 24);
+  font-weight: 700;
+  padding-block: clamp-vw(18, 23);
+  width: clamp-vw(300, 400);
   margin: 0 auto;
 }
 

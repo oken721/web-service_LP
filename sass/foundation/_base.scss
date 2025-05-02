@@ -2,6 +2,10 @@
 
 html {
   font-size: min(calc(16 / 1440 * 100vw), 16px);
+
+  @include mq(sp) {
+    font-size: min(calc(16 / 375 * 100vw), 16px);
+  }
 }
 
 body {
@@ -13,6 +17,11 @@ body {
       overflow: hidden;
     }
   }
+}
+
+.inner {
+  max-width: 82.4305vw; // 1187px
+  margin: 0 auto;
 }
 
 .hidden-sp {
