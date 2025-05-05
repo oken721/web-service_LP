@@ -8,7 +8,7 @@
 .p-what__inner {
   @include mq(sp) {
     padding-inline: 20px;
-    max-width: 100%;
+    width: 100%;
   }
 }
 

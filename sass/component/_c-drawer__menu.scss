@@ -13,6 +13,7 @@
     background-color: #edecfc;
     height: 100vh;
     padding-top: 80px;
+    z-index: 10;
 
     &.is-checked {
       display: block;

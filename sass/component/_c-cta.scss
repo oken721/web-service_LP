@@ -7,6 +7,12 @@
   padding-block: clamp-vw(40, 60);
 }
 
+.c-cta__inner{
+  @include mq(sp) {
+  padding-inline: 5.3333vw;
+  }
+}
+
 .c-cta__ttl {
   color: $base-white;
   text-align: center;

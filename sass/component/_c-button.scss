@@ -18,11 +18,22 @@
   font-weight: 700;
   line-height: 18px;
   padding-block: 18px;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+  transform: translateY(0);
+
+  &:hover {
+    transform: translateY(-6px);
+  }
 
   @include mq(sp) {
     font-size: max(18px, 4.8vw);
     width: max(300px, 80vw);
     padding-block: max(18px, 4.8vw);
+
+    &:hover {
+      transform: translateY(0);
+    }
   }
 }
 
@@ -35,15 +46,27 @@
   width: min(250px, 17.36111111111111vw);
   border-radius: 27px;
   border: 2px solid $base-color;
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.24);
   font-size: min(18px, 1.25vw);
   font-weight: 700;
   line-height: 18px;
   padding-block: 18px;
+  border: 2px solid $base-color;
+  transition: 0.3s ease;
+  transform: translateY(0);
+
+  &:hover {
+    transform: translateY(-6px);
+  }
 
   @include mq(sp) {
     font-size: max(18px, 4.8vw);
     width: max(300px, 80vw);
     padding-block: max(18px, 4.8vw);
+
+    &:hover {
+      transform: translateY(0);
+    }
   }
 }
 
@@ -57,6 +80,20 @@
   text-align: center;
   font-weight: 700;
   line-height: 16px;
+  transition: 0.3s ease;
+  border: 2px solid transparent;
+
+  &:hover {
+    background-color: $base-white;
+    color: $base-color;
+    border: 2px solid $base-color;
+
+    @include mq(sp) {
+      background-color: $base-color;
+      color: $base-white;
+      border: 2px solid transparent;
+    }
+  }
 }
 
 .c-button__normal {
@@ -83,11 +120,35 @@
   font-weight: 700;
   line-height: clamp-vw(16, 18);
   padding: calc(15px - 2px) calc(45px - 2px) calc(17px - 2px) calc(45px - 2px);
+  transition: 0.3s ease;
+
+  &:hover {
+    background-color: $base-black;
+    border: 2px solid $base-white;
+    color: $base-white;
+
+    @include mq(sp) {
+      background-color: $base-white;
+      color: $base-black;
+      border: 2px solid $base-black;
+    }
+  }
+}
+
+.c-button__middle:nth-child(2) {
+  border: 2px solid $base-color;
+  background-color: $base-color;
+  color: $base-white;
+
+  @include mq(sp) {
+    border: 2px solid $base-color;
+    background-color: $base-color;
+    color: $base-white;
+  }
 }
 
 .c-button__price {
   text-align: center;
-  margin-top: clamp-vw(19, 28);
   font-weight: 700;
   line-height: clamp-vw(16, 18);
   width: clamp-vw(166, 234);
@@ -96,14 +157,38 @@
 }
 
 .c-button__price-color {
+  text-align: center;
   border: 2px solid $base-white;
   background-color: transparent;
   color: $base-white;
-  margin-top: clamp-vw(19, 28);
   line-height: clamp-vw(16, 18);
   padding-block: clamp-vw(13, 16);
   padding-inline: 0;
   width: clamp-vw(166, 234);
+  transition: 0.3s ease;
+
+  &:hover {
+    background-color: $base-white;
+    border: 2px solid $base-white;
+    color: $base-color;
+
+    @include mq(sp) {
+      border: 2px solid $base-white;
+      background-color: transparent;
+      color: $base-white;
+    }
+  }
+}
+
+.c-button__price-highlight {
+  &:hover {
+    border: 2px solid $base-color;
+
+    @include mq(sp) {
+      background-color: $base-color;
+      color: $base-white;
+    }
+  }
 }
 
 .c-button__large {
@@ -115,6 +200,17 @@
   padding-block: clamp-vw(18, 23);
   width: clamp-vw(300, 400);
   margin: 0 auto;
+  border: 2px solid $base-color;
+  transition: 0.3s ease;
+  transform: translateY(0);
+
+  &:hover {
+    transform: translateY(-6px);
+
+    @include mq(sp) {
+      transform: translateY(0);
+    }
+  }
 }
 
 .c-button__white {

@@ -1,6 +1,7 @@
 @use "../global" as *;
 
 html {
+  scroll-behavior: smooth;
   font-size: min(calc(16 / 1440 * 100vw), 16px);
 
   @include mq(sp) {
@@ -11,16 +12,11 @@ html {
 body {
   color: $base-black;
   font-family: $ff-ja;
-
-  @include mq(sp) {
-    &.is-checked {
-      overflow: hidden;
-    }
-  }
 }
 
 .inner {
-  max-width: 82.4305vw; // 1187px
+  width: 82.4305vw; // 1187px
+  max-width: 1187px;
   margin: 0 auto;
 }
 

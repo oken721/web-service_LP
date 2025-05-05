@@ -7,16 +7,13 @@
 
 .p-question__inner {
   @include mq(sp) {
-    max-width: 100%;
+    width: 100%;
     padding-inline: 5.3333vw;
   }
 }
 
 .p-question__container {
   margin-top: clamp-vw(40, 60);
-}
-
-.p-question__list {
 }
 
 .p-question__list + .p-question__list {
@@ -51,6 +48,7 @@
     padding-right: 2.6666vw;
     padding-left: 12.5333vw;
     line-height: 6.82666vw;
+    border-radius: 4px;
   }
 }
 

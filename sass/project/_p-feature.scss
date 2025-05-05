@@ -7,7 +7,7 @@
 
 .p-feature__inner {
   @include mq(sp) {
-    max-width: 100%;
+    width: 100%;
   }
 }
 
@@ -77,13 +77,16 @@
 
 .p-feature__body {
   display: flex;
-  justify-content: center;
   align-items: flex-start;
   width: 51.5277vw;
+  max-width: 742px;
   height: 25.4166vw;
+  max-height: 367px;
   border-radius: 30px;
   background: $base-white;
-  padding-block: 4.5138vw;
+  padding-block: clamp-vw(65, 4.5138);
+  padding-left: clamp-vw(40, 2.7777);
+  padding-right: clamp-vw(19, 1.3194);
 
   @include mq(sp) {
     flex-direction: column;
@@ -93,6 +96,7 @@
     padding-block: 0;
     padding-top: 13.0666vw;
     padding-bottom: 10.6666vw;
+    padding-left: 0;
   }
 }
 
@@ -117,15 +121,18 @@
 .p-feature__ttl {
   font-size: clamp-vw(22, 36);
   font-weight: 700;
+  white-space: nowrap;
 
   @include mq(sp) {
     font-size: 5.8666vw;
     padding-left: 5.3333vw;
+    white-space: nowrap;
   }
 }
 
 .p-feature__txt {
   width: 32.6388vw;
+  max-width: 470px;
   margin-top: clamp-vw(8, 17);
   font-size: clamp-vw(14, 16);
   line-height: clamp-vw(22.4, 28.8);

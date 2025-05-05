@@ -4,6 +4,13 @@
   padding-block: clamp-vw(60, 100);
 }
 
+.p-users__inner {
+  @include mq(sp) {
+    width: 100%;
+    padding-inline: 5.3333vw;
+  }
+}
+
 .p-users__container {
   margin-top: clamp-vw(24, 40);
 }

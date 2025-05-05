@@ -8,22 +8,32 @@
   max-width: 70.8333vw;
 
   @include mq(sp) {
+    width: 100%;
     max-width: 100%;
+    margin: 0;
   }
 }
 
 .p-price__scroll {
+  margin-top: clamp-vw(40, 68);
+  padding-bottom: 3px;
   @include mq(sp) {
     overflow-x: auto;
+  }
+
+  &::-webkit-scrollbar {
+    height: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $base-color;
+    border-radius: 4px;
   }
 }
 
 .p-price__container {
   margin-top: clamp-vw(40, 68);
-  width: max-content;
 
   @include mq(sp) {
-    min-width: 375px;
     padding-left: 20px;
   }
 }
@@ -32,6 +42,10 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+
+  @include mq(sp) {
+    min-width: 727px;
+  }
 }
 
 .p-price__item {
@@ -42,13 +56,21 @@
   padding-top: clamp-vw(28, 47);
   padding-bottom: clamp-vw(28, 41);
 
+  @include mq(sp) {
+    width: 180px;
+  }
+
   &:nth-of-type(2) {
     width: clamp-vw(216, 260);
     background-color: $base-color;
-    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.6);
+    box-shadow: 0px -4px 20px 0px rgba(0, 0, 0, 0.6);
     height: clamp-vw(232, 286);
-    padding-top: 4.375vw;
-    z-index: -1;
+    padding-top: clamp-vw(54, 62);
+
+    @include mq(sp) {
+      width: 216px;
+      padding-top: 60px;
+    }
   }
 }
 
@@ -67,6 +89,10 @@
   span {
     font-size: clamp-vw(30, 36);
   }
+}
+
+.p-price__item-btn {
+  margin-top: clamp-vw(19, 28);
 }
 
 .p-price__comparison {
@@ -95,7 +121,7 @@
 
   th {
     @include mq(sp) {
-      width: 151px;
+      width: 141px;
     }
   }
 
@@ -103,6 +129,10 @@
     width: clamp-vw(180, 260);
     text-align: center;
     font-size: clamp-vw(14, 18);
+
+    @include mq(sp) {
+      width: 180px;
+    }
 
     strong {
       font-weight: 700;
@@ -123,8 +153,7 @@
 
 .sp-size {
   @include mq(sp) {
-    display: block;
-    width: clamp-vw(216, 260);
+    width: 216px;
   }
 }
 
@@ -132,15 +161,12 @@
   margin-top: clamp-vw(9, 17);
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   gap: clamp-vw(25, 32);
+  height: clamp-vw(60, 81);
+  padding-right: 8px;
 
   @include mq(sp) {
     gap: 32px;
   }
-}
-
-.c-button__middle:nth-child(2) {
-  border: 2px solid $base-color;
-  background-color: $base-color;
-  color: $base-white;
 }
