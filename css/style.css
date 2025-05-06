@@ -1193,7 +1193,14 @@ body {
 }
 @media screen and (max-width: 767px) {
   .p-price__scroll {
+    -webkit-overflow-scrolling: touch;
     overflow-x: auto;
+    scrollbar-width: auto;
+    -ms-touch-action: pan-x;
+        touch-action: pan-x;
+    cursor: -webkit-grab;
+    cursor: grab;
+    overscroll-behavior-x: contain;
   }
 }
 .p-price__scroll::-webkit-scrollbar {

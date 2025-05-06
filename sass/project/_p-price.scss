@@ -18,7 +18,12 @@
   margin-top: clamp-vw(40, 68);
   padding-bottom: 3px;
   @include mq(sp) {
+    -webkit-overflow-scrolling: touch;
     overflow-x: auto;
+    scrollbar-width: auto;
+    touch-action: pan-x;
+    cursor: grab;
+    overscroll-behavior-x: contain;
   }
 
   &::-webkit-scrollbar {
