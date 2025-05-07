@@ -1,0 +1,36 @@
+@use "../global" as *;
+
+.c-cta {
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: $base-black;
+  padding-block: clamp-vw(40, 60);
+}
+
+.c-cta__inner{
+  @include mq(sp) {
+  padding-inline: 5.3333vw;
+  }
+}
+
+.c-cta__ttl {
+  color: $base-white;
+  text-align: center;
+  font-size: clamp-vw(18, 36);
+  font-weight: 700;
+  letter-spacing: clamp-vw(0.36, 0.72);
+
+  @include mq(sp) {
+    font-size: 18px;
+  }
+}
+
+.c-cta__button {
+  text-align: center;
+  margin-top: clamp-vw(24, 32);
+}
+
+.c-button__cta {
+  background-color: $base-color;
+  color: $base-white;
+}

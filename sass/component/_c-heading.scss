@@ -1,0 +1,21 @@
+@use "../global" as *;
+
+.c-heading {
+  text-align: center;
+}
+
+.c-heading__lb {
+  color: #9f9ec1;
+  font-size: clamp-vw(22, 36);
+  font-family: $ff-en;
+  font-weight: 700;
+}
+
+.c-heading__ttl {
+  color: $base-color;
+  font-size: clamp-vw(30, 48);
+  font-weight: 700;
+  line-height: clamp-vw(30, 48);
+  letter-spacing: clamp-vw(1.5, 2.4);
+  margin-top: clamp-vw(12, 18);
+}

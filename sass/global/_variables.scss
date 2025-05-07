@@ -1,7 +1,19 @@
+//clamp（viewport範囲指定）
+@function clamp-vw($min, $max, $min-view-port: 375, $max-view-port: 1440) {
+  $valiable-part: calc(($max - $min) / ($max-view-port - $min-view-port));
+  $constant: calc(($max - $max-view-port * $valiable-part) / 16);
+  $min-rem: calc($min / 16 * 1rem);
+  $max-rem: calc($max / 16 * 1rem);
+  $variable-rem: calc($constant * 1rem);
+  $variable-vw: calc(100 * $valiable-part * 1vw);
+
+  @return clamp($min-rem, $variable-rem + $variable-vw, $max-rem);
+}
+
 // カラー
-$base-black: #2D2D32;
-$base-white: #FFFFFF;
-$base-color: #64629D;
+$base-black: #2d2d32;
+$base-white: #ffffff;
+$base-color: #64629d;
 
 // フォント
 $ff-ja: "Noto Sans JP", sans-serif;
@@ -13,7 +25,8 @@ $inner-width: 768px;
 // ブレークポイント
 $breakpoints: (
   // スマホ：767px 以下
-  sp:  "screen and (max-width: #{($inner-width - 1px)})", // → max-width: 767px
+  sp: "screen and (max-width: #{($inner-width - 1px)})",
+  // → max-width: 767px
   // PC：768px 以上
-  pc:  "screen and (min-width: #{$inner-width})"         // → min-width: 768px
+  pc: "screen and (min-width: #{$inner-width})" // → min-width: 768px
 );

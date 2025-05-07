@@ -1,14 +1,19 @@
-@use "../global/mixin" as mixin;
-@use "../global/variables" as global;
+@use "../global" as *;
 
 .c-drawer__menu {
   display: none;
 
-  @include mixin.mq(sp) {
+  @include mq(sp) {
+    width: 100%;
+    position: fixed;
+    top: 52px;
+    right: 0;
+    bottom: 0;
     display: none;
     background-color: #edecfc;
     height: 100vh;
     padding-top: 80px;
+    z-index: 10;
 
     &.is-checked {
       display: block;
@@ -17,22 +22,24 @@
 }
 
 .c-drawer__lists {
-  @include mixin.mq(sp) {
+  @include mq(sp) {
+    width: 220px;
     display: flex;
     flex-direction: column;
     gap: 40px;
-    margin-inline: 105px;
+    margin: 0 auto;
     padding-bottom: 60px;
   }
 }
 
 .c-drawer__list {
-  @include mixin.mq(sp) {
+  @include mq(sp) {
     font-size: 24px;
     font-weight: 700;
     line-height: 24px;
     letter-spacing: 0.72px;
     position: relative;
+    padding-left: 32px;
 
     &::before {
       position: absolute;
@@ -43,7 +50,15 @@
       height: 20px;
       top: 50%;
       transform: translateY(-50%);
-      left: -30px;
+      left: 0;
     }
+  }
+}
+
+.c-drawer__button {
+  @include mq(sp) {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
   }
 }

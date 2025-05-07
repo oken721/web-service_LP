@@ -1,8 +1,16 @@
-@use "../global/mixin" as mixin;
-@use "../global/variables" as global;
+@use "../global" as *;
 
 .l-header {
+  @include mq(sp) {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 52px;
+    background-color: $base-white;
+    z-index: 50;
+  }
 }
+
 .l-header__inner {
   display: flex;
   justify-content: space-between;
@@ -12,18 +20,16 @@
   margin: 0 auto;
   height: 72px;
 
-  @include mixin.mq(sp) {
+  @include mq(sp) {
     height: 52px;
     margin: 0;
     width: 100%;
     padding-inline: 20px;
   }
 }
-.l-header__logo {
-}
 
 .l-header__menu {
-  @include mixin.mq(sp) {
+  @include mq(sp) {
     display: none;
   }
 }
@@ -34,17 +40,40 @@
   gap: 16px;
 }
 
-.l-header__menu-list {
+.l-header__menu-item {
   font-size: min(14px, 1.1794439764111204vw);
   font-weight: 700;
   line-height: 14px;
   letter-spacing: 0.42px;
+  position: relative;
+
+  &:nth-child(6) {
+    position: static;
+  }
+
+  &::before {
+    background: $base-color;
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transform-origin: center top;
+    transform: scale(0, 1);
+    transition: transform 0.3s;
+  }
+
+  &:hover::before {
+    transform-origin: center top;
+    transform: scale(1, 1);
+  }
 }
 
 .l-header__icon-box {
   display: none;
 
-  @include mixin.mq(sp) {
+  @include mq(sp) {
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -58,8 +87,8 @@
 }
 
 .l-header__open-txt {
-  @include mixin.mq(sp) {
-    color: global.$base-color;
+  @include mq(sp) {
+    color: $base-color;
     text-align: center;
     font-size: 6px;
     font-weight: 700;

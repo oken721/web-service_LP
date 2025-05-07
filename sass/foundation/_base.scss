@@ -1,17 +1,35 @@
-@use "../global/mixin" as mixin;
-@use "../global/variables" as global;
+@use "../global" as *;
 
 html {
+  scroll-behavior: smooth;
   font-size: min(calc(16 / 1440 * 100vw), 16px);
+
+  @include mq(sp) {
+    font-size: min(calc(16 / 375 * 100vw), 16px);
+  }
 }
 
 body {
-  color: global.$base-black;
-  font-family: global.$ff-ja, global.$ff-en;
+  color: $base-black;
+  font-family: $ff-ja;
+}
+
+.inner {
+  width: 82.4305vw; // 1187px
+  max-width: 1187px;
+  margin: 0 auto;
 }
 
 .hidden-sp {
-  @include mixin.mq(sp) {
+  @include mq(sp) {
     display: none;
+  }
+}
+
+.hidden-pc {
+  display: none;
+
+  @include mq(sp) {
+    display: block;
   }
 }

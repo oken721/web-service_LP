@@ -1,0 +1,177 @@
+@use "../global" as *;
+
+.p-price {
+  padding-block: clamp-vw(60, 100);
+}
+
+.p-price__inner {
+  max-width: 70.8333vw;
+
+  @include mq(sp) {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.p-price__scroll {
+  margin-top: clamp-vw(40, 68);
+  padding-bottom: 3px;
+  @include mq(sp) {
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+    scrollbar-width: auto;
+    touch-action: pan-x;
+    cursor: grab;
+    overscroll-behavior-x: contain;
+  }
+
+  &::-webkit-scrollbar {
+    height: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $base-color;
+    border-radius: 4px;
+  }
+}
+
+.p-price__container {
+  margin-top: clamp-vw(40, 68);
+
+  @include mq(sp) {
+    padding-left: 20px;
+  }
+}
+
+.p-price__list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  @include mq(sp) {
+    min-width: 727px;
+  }
+}
+
+.p-price__item {
+  width: clamp-vw(180, 260);
+  height: clamp-vw(200, 270);
+  background-color: $base-black;
+  text-align: center;
+  padding-top: clamp-vw(28, 47);
+  padding-bottom: clamp-vw(28, 41);
+
+  @include mq(sp) {
+    width: 180px;
+  }
+
+  &:nth-of-type(2) {
+    width: clamp-vw(216, 260);
+    background-color: $base-color;
+    box-shadow: 0px -4px 20px 0px rgba(0, 0, 0, 0.6);
+    height: clamp-vw(232, 286);
+    padding-top: clamp-vw(54, 62);
+
+    @include mq(sp) {
+      width: 216px;
+      padding-top: 60px;
+    }
+  }
+}
+
+.p-price__name {
+  color: $base-white;
+  font-size: clamp-vw(20, 24);
+  font-weight: 700;
+}
+
+.p-price__price {
+  color: $base-white;
+  font-size: clamp-vw(12, 18);
+  font-weight: 700;
+  margin-top: clamp-vw(11, 17);
+
+  span {
+    font-size: clamp-vw(30, 36);
+  }
+}
+
+.p-price__item-btn {
+  margin-top: clamp-vw(19, 28);
+}
+
+.p-price__comparison {
+  @include mq(sp) {
+    min-width: 727px;
+  }
+}
+
+.p-price__table {
+  width: 100%;
+  border-collapse: collapse;
+
+  tr {
+    height: 60px;
+
+    @include mq(sp) {
+      height: 42px;
+    }
+  }
+
+  th,
+  td {
+    vertical-align: middle;
+    font-weight: 400;
+  }
+
+  th {
+    @include mq(sp) {
+      width: 141px;
+    }
+  }
+
+  td {
+    width: clamp-vw(180, 260);
+    text-align: center;
+    font-size: clamp-vw(14, 18);
+
+    @include mq(sp) {
+      width: 180px;
+    }
+
+    strong {
+      font-weight: 700;
+      font-size: clamp-vw(20, 24);
+    }
+  }
+}
+
+.th-font {
+  font-size: clamp-vw(15, 20);
+  text-align-last: left;
+  padding-left: clamp-vw(18, 32);
+}
+
+.tr-color {
+  background: #edecfc;
+}
+
+.sp-size {
+  @include mq(sp) {
+    width: 216px;
+  }
+}
+
+.p-price__button {
+  margin-top: clamp-vw(9, 17);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: clamp-vw(25, 32);
+  height: clamp-vw(60, 81);
+  padding-right: 8px;
+
+  @include mq(sp) {
+    gap: 32px;
+  }
+}

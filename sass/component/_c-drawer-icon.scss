@@ -1,8 +1,7 @@
-@use "../global/mixin" as mixin;
-@use "../global/variables" as global;
+@use "../global" as *;
 
 .c-drawer__icon {
-  @include mixin.mq(sp) {
+  @include mq(sp) {
     &.is-checked {
       .c-drawer__icon-ber {
         &:nth-child(1) {
@@ -27,7 +26,7 @@
   right: 0;
   width: 21px;
   height: 3px;
-  background-color: global.$base-color;
+  background-color: $base-color;
   border-radius: 30px;
   transition: transform 0.2s linear, top 0.2s linear;
 
